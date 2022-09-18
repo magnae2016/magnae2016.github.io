@@ -16,12 +16,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: yarn
+          cache: npm
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
       - name: Build website
-        run: yarn build
+        run: npm run build
 
       # 깃허브 페이지에 배포하기 위한 일반적인 액션
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
