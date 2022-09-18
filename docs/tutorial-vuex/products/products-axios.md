@@ -28,7 +28,7 @@ vuex-quick-starts
 ```ts title="/src/api/instance/index.ts"
 import axios, { AxiosInstance } from "axios";
 
-const APP_BASE_URI = "https://dummyjson.com/";
+const APP_BASE_URI = "https://dummyjson.com";
 
 function create(url: string, options = {}): AxiosInstance {
   const instance = axios.create(Object.assign({ baseURL: url }, options));
