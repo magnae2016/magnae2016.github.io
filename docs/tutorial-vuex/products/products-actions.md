@@ -54,3 +54,15 @@ export const getAllProducts = async ({
   commit(SET_ALL_PRODUCTS, data.products)
 };
 ```
+
+### export default -> export 에러 수정하기
+
+```ts title="/src/store/modules/products/index.ts"
+import { Module } from "vuex";
+import { State as RootState } from "../../index";
+// highlight-next-line
+import * as actions from "./actions";
+import getters from "./getters";
+import mutations from "./mutations";
+// ...
+```
